@@ -1,0 +1,10 @@
+Package: openelections
+Type: Package
+Title: Wrapper for openelections API
+Version: 0.1.0
+Authors@R: person("Gordon", "Shotwell", email = "g.e.shotwell@gmail.com",
+                  role = c("aut", "cre"))
+Description: A wrapper over the Open Elections API for details see: <http://docs.openelections.net/metadata-api/>
+License: MIT
+LazyData: TRUE
+Imports: jsonlite
