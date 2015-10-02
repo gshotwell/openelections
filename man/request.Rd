@@ -4,14 +4,19 @@
 \alias{request}
 \title{Request data from openelections API}
 \usage{
-request(state, start_date, end_date = 2012, output = "dataframe")
+request(state, start_date, end_date = "2012-01-01", offset = NULL,
+  output = "dataframe")
 }
 \arguments{
 \item{state}{Two letter state capitalized state abbreviation.}
 
-\item{start_date}{Start date of dataset}
+\item{start_date}{Start date of dataset, must be after 2000-01-01.}
 
-\item{end_date}{End date of dataset}
+\item{end_date}{End year of dataset, must be before 2014-12-31}
+
+\item{offset}{API returns batches of 20, so if querying more than twenty records, you need
+to run two queries and specify the offset value for the second query. Offset
+defaults to 0.}
 
 \item{output}{Do you want to return a "dataframe" or a "list". The list includes additional
 information about the API call.}
